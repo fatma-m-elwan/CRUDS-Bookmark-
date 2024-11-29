@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ttttttttt">
+    <title>Bookmark</title>
+    <!-- favicon -->
+    <link rel="icon" href="" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrab cdn -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <section>
+        <div class="container my-5">
+            <h1 class= "m-auto position-relative ">Bookmarker</h1>
+            <div id="inputData" class="mt-5 py-4">
+                <h2  class="text-center pb-4">
+                    <i class="fa-solid fa-bookmark "></i>
+                     Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="mb-3">
+                    <label for="siteName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                    <input oninput="validationName(this)" type="text" class="form-control" id="siteName" placeholder="Bookmark Name">
+                </div>
+                <div class="mb-3">
+                    <label for="siteUrl" class="form-label fw-bold"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                    <input oninput="validationUrl(this)" type="url" class="form-control" id="siteUrl" placeholder="Website URL">
+                </div>
+                <div class="text-center mt-4">
+                    <button onclick="addData()"  id ="btnAdd" class="btn btn-danger px-5 ">Submit</button>
+                    <button onclick="updateItem()" id="btnUpdate" class="btn btn-warning px-5 text-light d-none">Update</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="mb-3">
+                <input oninput="searchItem()"  type="search" class="form-control w-50 mx-auto" id="searchData" placeholder="Search By Site Name..... ">
+            </div>
+            <table class="table text-center ">
+                <thead >
+                    <tr>
+                        <th  class="bg-light">Index</th>
+                        <th class="bg-light">Website Name</th>
+                        <th class="bg-light">Visit</th>
+                        <th class="bg-light">Delete</th>
+                        <th class="bg-light">Update</th>
+                    </tr>
+                </thead>
+                <tbody id="rowData">
+                      
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
